@@ -4,7 +4,13 @@ let title = "projectFirst",
   rollback = 55,
   fullPrice = 300000,
   adaptive = true;
-alert("Первый урок");
-console.log("Первый урок");
-let myVar = 10;
-console.log(typeof myVar);
+console.log(typeof title);
+console.log(typeof fullPrice);
+console.log(typeof adaptive);
+console.log(screens.length);
+console.log(
+  "Стоимость вёрстки экранов " + screenPrice + " рублей/долларов/гривен/юани"
+);
+screens = screens.toLowerCase();
+console.log(screens.split());
+console.log(fullPrice * (rollback / 100));
