@@ -12,5 +12,5 @@ console.log(
   "Стоимость вёрстки экранов " + screenPrice + " рублей/долларов/гривен/юани"
 );
 screens = screens.toLowerCase();
-console.log(screens.split());
-console.log(fullPrice * (rollback / 100));
+console.log(screens.split(", "));
+console.log(fullPrice * (rollback / 100) + " %");
