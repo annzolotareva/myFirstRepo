@@ -18,17 +18,16 @@ const isNumber = function (num) {
 const asking = function () {
   title = prompt("Как называется Ваш проект?", "Калькулятор вёрстки");
   screens = prompt("Какие типы экранов нужно разработать?", "Простые, Сложные");
-  screenPrice = prompt("Сколько будет стоить данная работа?");
 
-  while (!isNumber(screenPrice)) {
-    screenPrice = prompt("Сколько будет стоить данная работа?");
-  }
+  do {
+    screenPrice = +prompt("Сколько будет стоить данная работа?");
+  } while (!isNumber(screenPrice));
   adaptive = confirm("Нужен ли адаптив на сайте?");
 };
 
 const getAllServicePrices = function () {
   let sum = 0;
-
+  let result = 0;
   for (let i = 0; i < 2; i++) {
     if (i === 0) {
       service1 = prompt("Какой дополнительный тип услуги нужен?");
@@ -36,11 +35,13 @@ const getAllServicePrices = function () {
       service2 = prompt("Какой дополнительный тип услуги нужен?");
     }
 
-    sum += +prompt("Сколько это будет стоить?");
+    do {
+      sum = +prompt("Сколько это будет стоить?");
+    } while (!isNumber(sum));
+    result += sum;
   }
 
-  return sum;
-  // return servicePrice1 + servicePrice2;
+  return result;
 };
 
 const showTypeOf = function (variable) {
