@@ -1,5 +1,30 @@
 "use strict";
 
+const tit = document.getElementsByTagName("h1");
+const title = tit[0];
+
+const handlerButons = document.getElementsByClassName("handler_btn");
+const startButton = handlerButons[0];
+const resetButton2 = handlerButons[1];
+
+const sumButton = document.querySelector(".screen-btn");
+
+const perсent = document.querySelectorAll(".other-items.percent");
+const number = document.querySelectorAll(".other-items.number");
+
+const inputTypeRange = document.querySelector(".rollback input[type=range]");
+
+const rangeValue = document.querySelector(".rollback span.range-value");
+
+const totalInput = document.getElementsByClassName("total-input");
+const screenPrice = totalInput[0];
+const numberOfScreens = totalInput[1];
+const allServicePrices = totalInput[2];
+const fullPrice = totalInput[3];
+const servicePercentPrice = totalInput[4];
+
+let screenBlock = document.querySelectorAll(".screen");
+
 const appData = {
   title: "",
   screens: [],
@@ -92,4 +117,4 @@ const appData = {
   },
 };
 
-appData.start();
+// appData.start();
