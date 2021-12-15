@@ -109,6 +109,7 @@ const appData = {
       const input = screen.querySelector("input[type=text]");
       if (input.value.trim() === "" || select.value === "") {
         appData.isError = true;
+        alert("Заполните поля!");
       }
     });
     if (!appData.isError) {
